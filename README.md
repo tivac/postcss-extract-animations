@@ -40,4 +40,4 @@ Reducing the risk of drift since everything is contained within a single selecto
 postcss([ require('postcss-extract-animations') ])
 ```
 
-See [PostCSS] docs for examples for your environment.
+See [PostCSS](https://github.com/postcss/postcss) docs for examples for your environment.
