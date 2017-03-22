@@ -21,6 +21,7 @@
     "keyframes"
   ],
   "author": "Pat Cavit <npm@patcavit.com>",
+  "repo": "tivac/postcss-extract-animations",
   "license": "MIT",
   "dependencies": {
     "postcss": "^5.2.16",
