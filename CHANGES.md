@@ -1,6 +1,6 @@
 # Changes
 
-## 2.0.0
+## 2.0.1
 
 - chore: dev package updates
 - chore: postcss@6 compatibility (#2)
