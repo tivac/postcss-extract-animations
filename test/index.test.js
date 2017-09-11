@@ -31,6 +31,20 @@ describe("postcss-extract-animations", () => {
         .then((result) => expect(result.css).toMatchSnapshot())
     );
 
+    it("should extract animations from more complex declarations", () =>
+        plugin.process(dedent(`
+            .a {
+                animation: 1s ease-in 1s 2 reverse both paused @keyframes {
+                    to {
+                        opacity: 1;
+                    }
+                }
+            }
+        `))
+        .then((result) => expect(result.css).toMatchSnapshot())
+    );
+
+
     it("shouldn't touch declarations around the animation", () =>
         plugin.process(dedent(`
             .a {

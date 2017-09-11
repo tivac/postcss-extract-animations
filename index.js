@@ -8,31 +8,34 @@ module.exports = postcss.plugin(require("./package.json").name, () =>
         // PostCSS doesn't see it as a decl like you'd expect, so use
         // .walkRules with a very peculiar-looking filter regex
         root.walkRules(/^animation:.*@keyframes$/i, (rule) => {
-            var anim, decl, name;
+            const parent = rule.parent;
             
             // TODO: real name generation
-            name = `anim-${slug(rule.parent.selector)}`;
+            const name = `anim-${slug(parent.selector)}`;
             
-            anim = rule.clone({
+            const anim = rule.clone({
                 type   : "atrule",
                 name   : "keyframes",
-                params : name
+                params : name,
+                raws   : Object.assign({}, parent.raws)
             });
 
-            decl = rule.clone({
-                type  : "decl",
-                prop  : "animation",
-                value : rule.selector
+            const decl = postcss.decl({
+                prop   : "animation",
+                source : rule.source,
+                value  : rule.selector
                     .replace(/^animation:\s*/, "")
                     .replace(/@keyframes\s*/, name)
             });
 
-            delete anim.selector;
-            
-            rule.parent.parent.insertBefore(rule.parent, anim);
+            // Insert animation
+            root.insertBefore(parent, anim);
             
             // Replace source rule w/ animation decl
             rule.replaceWith(decl);
+
+            // Try to clean up spacing for the rule we just modified
+            delete parent.raws.before;
         });
     }
 );
