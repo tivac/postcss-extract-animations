@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`postcss-extract-animations should extract animations from more complex declarations 1`] = `
+"@keyframes anim-c4fe818f {
+        to {
+            opacity: 1;
+        }
+}
+.a {
+    animation: 1s ease-in 1s 2 reverse both paused anim-c4fe818f
+}"
+`;
+
 exports[`postcss-extract-animations should extract animations from more complex selectors 1`] = `
 "@keyframes anim-7947fab3 {
-    to {
-        opacity: 1
-    }
+        to {
+            opacity: 1;
+        }
 }
 .a .b > div > a[animate] {
     animation: 1s anim-7947fab3
@@ -13,9 +24,9 @@ exports[`postcss-extract-animations should extract animations from more complex 
 
 exports[`postcss-extract-animations should extract animations from simple selectors 1`] = `
 "@keyframes anim-c4fe818f {
-    to {
-        opacity: 1
-    }
+        to {
+            opacity: 1;
+        }
 }
 .a {
     animation: 1s anim-c4fe818f
@@ -24,9 +35,9 @@ exports[`postcss-extract-animations should extract animations from simple select
 
 exports[`postcss-extract-animations shouldn't touch declarations around the animation 1`] = `
 "@keyframes anim-c4fe818f {
-    to {
-        opacity: 1;
-    }
+        to {
+            opacity: 1;
+        }
 }
 .a {
     color: #FFF;
@@ -37,9 +48,9 @@ exports[`postcss-extract-animations shouldn't touch declarations around the anim
 
 exports[`postcss-extract-animations shouldn't touch normal animation decls 1`] = `
 "@keyframes anim-c4fe818f {
-    to {
-        opacity: 1
-    }
+        to {
+            opacity: 1;
+        }
 }
 .a {
     animation: 1s reveal;
