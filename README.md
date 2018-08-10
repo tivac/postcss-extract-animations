@@ -3,7 +3,7 @@ postcss-extract-animations [![NPM Version](https://img.shields.io/npm/v/postcss-
 [![NPM Downloads](https://img.shields.io/npm/dm/postcss-extract-animations.svg)](https://www.npmjs.com/package/postcss-extract-animations)
 [![Build Status](https://img.shields.io/travis/tivac/postcss-extract-animations.svg)](https://travis-ci.org/tivac/postcss-extract-animations)
 [![Dependency Status](https://img.shields.io/david/tivac/postcss-extract-animations.svg)](https://david-dm.org/tivac/postcss-extract-animations)
-[![devDependency Status](https://img.shields.io/david/dev/tivac/postcss-extract-animations.svg)](https://david-dm.org/tivac/postcss-extract-animations#info=devDependencies)
+[![devDependency Status](https://img.shields.io/david/dev/tivac/postcss-extract-animations.svg)](https://david-dm.org/tivac/postcss-extract-animations#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/tivac/postcss-extract-animations.svg)](https://greenkeeper.io/)
 
 Extract inline `@keyframes` from your CSS rules so you can look at everything in one place.
 
