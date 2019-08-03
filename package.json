@@ -31,7 +31,7 @@
   "devDependencies": {
     "@studio/changes": "^1.1.0",
     "dedent": "^0.7.0",
-    "eslint": "^4.6.1",
+    "eslint": "^6.1.0",
     "eslint-config-arenanet": "^4.4.2",
     "husky": "^0.14.3",
     "jest": "^24.8.0",
